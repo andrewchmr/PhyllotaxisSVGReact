@@ -32,11 +32,11 @@ class App extends React.Component<{}, AppState> {
     }
 
     getXY(n: number) {
-        const a = n * 137.5;
+        const angle = n * 137.5;
         const r = c * Math.sqrt(n);
 
-        const x = r * Math.cos(this.toDegrees(a)) + window.innerWidth / 2;
-        const y = r * Math.sin(this.toDegrees(a)) + window.innerHeight / 2;
+        const x = r * Math.cos(this.toDegrees(angle)) + window.innerWidth / 2;
+        const y = r * Math.sin(this.toDegrees(angle)) + window.innerHeight / 2;
 
         return {x: x, y: y};
     }

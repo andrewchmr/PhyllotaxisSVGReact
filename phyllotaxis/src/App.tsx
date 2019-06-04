@@ -42,10 +42,10 @@ class App extends React.Component<{}, AppState> {
     }
 
     public render() {
-
         let circles = [];
         for (let i = 0; i < this.state.n; ++i) {
-            circles.push(<circle stroke={'black'} fill={`rgb(${i % 256}, ${i % 256}, ${i % 256})`} r={7}
+            const color = i % 256;
+            circles.push(<circle stroke={'black'} fill={`rgb(${color}, ${color}, ${color})`} r={7}
                                  cx={this.getXY(i).x} cy={this.getXY(i).y}
                                  key={i}/>)
         }
